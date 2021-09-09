@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.cuadro1{
+position: absolute;
+width: 50%;
+height: 100%;
+right: 50%;
+background: blue;
+
+
+
+}	
+
+.cuadro2{
+position: absolute;
+width: 50%;
+height: 100%;
+right: 0%;
+background: black;
+
+
+
+}
+.pelota{
+position: absolute;
+width: 10%;
+height: 10%;
+right: 54%;
+top: 10%;
+background: white;
+
+
+
+}
+</style>
+	<title>Actividad</title>
+</head>
+
+<body onkeypress="teclado()">
+
+	<div class="cuadro1" id="dd"></div>
+	<div class="cuadro2" id="de"></div>
+	<div class="pelota" id="mo"></div>
+ <script>
+ y=100;
+ x=850;	
+function teclado()
+{
+
+if(event.code=="KeyS")
+{
+y=y+10;
+mo.style.top=y+"px";
+mo.style.left=x+"px";
+}
+
+if(event.code=="KeyW")
+{
+y=y-10;
+mo.style.top=y+"px";
+mo.style.left=x+"px";
+}
+
+
+if(event.code=="KeyD")
+{
+x=x+10;
+mo.style.top=y+"px";
+mo.style.left=x+"px";
+}
+
+
+if(event.code=="KeyA")
+{
+x=x-10;
+mo.style.top=y+"px";
+mo.style.left=x+"px";
+}
+ if(x<760)
+ {
+
+dd.style.background="Red";
+de.style.background="black";
+}
+
+
+ if(x>950)
+ {
+
+de.style.background="Red";
+dd.style.background="blue";
+}
+
+
+ if(x==860)
+ {
+
+de.style.background="Red";
+dd.style.background="Red";
+}
+}
+
+
+ </script>
+</body>
+</html>
